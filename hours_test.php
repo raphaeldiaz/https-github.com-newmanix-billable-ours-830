@@ -7,7 +7,7 @@ require_once 'simpletest/web_tester.php';
 class LoginForm extends WebTestCase {
 
 	  function testCorrectPassword() {
-		$this->get(VIRTUAL_PATH . '/login.php');
+		$this->get(VIRTUAL_PATH . '/hours.php');
 		$this->assertResponse(200);
 
         $this->setField("name", "John");
@@ -18,19 +18,7 @@ class LoginForm extends WebTestCase {
 		$this->assertText("Welcome, John");
 	}
 	
- 	 function testFailedPassword() {
-		$this->get(VIRTUAL_PATH . '/login.php');
-		$this->assertResponse(200);
-
-		$this->setField("name", "John");
-		$this->setField("password", "XYZXYZ");//incorrect password
-		$this->clickSubmit("Login");
-
-		$this->assertResponse(200);
-		$this->assertText("Login and/or password is incorrect");
-	}
-
-}
+You input 2 hours at a rate of $2 and your pay is $100
 
 
 
