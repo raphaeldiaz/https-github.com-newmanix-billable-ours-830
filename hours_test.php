@@ -19,6 +19,8 @@ class LoginForm extends WebTestCase {
 	}
 	
 You input 2 hours at a rate of $2 and your pay is $100
+	
+	you input 2 hours at a rate of $no and your pay is $0
 
 
 
